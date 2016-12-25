@@ -1,0 +1,71 @@
+@import "reset.less";
+@import "nav.less";
+
+.main {
+    width: 100%;
+
+    .breadcrumb {
+        height: 50px;
+        line-height: 50px;
+        padding-left: 15px;
+        border-bottom: 1px dashed #ccc;
+
+        li {
+            float: left;
+
+            a {
+                padding: 0 15px;
+            }
+        }
+
+        .admin {
+            position: absolute;
+            top: 0;
+            right: 5%;
+            color: red;
+            font-size: 15px;
+            font-weight: normal;
+        }
+    }
+    .upload {
+        margin: 25px 0 0 25px;
+
+        p {
+            height: 35px;
+            line-height: 35px;
+            position: relative;
+            margin: 10px 0;
+
+
+            input:not([type=submit]) {
+                width: 200px;
+                height: 25px;
+                line-height: 25px;
+                border: 1px solid #ccc;
+                background: #fff;
+                padding-left: 15px;
+                border-radius: 4px;
+            }
+            input[type=submit] {
+                cursor: pointer;
+            }
+            input[type=file] {
+                opacity: 0;
+                cursor: pointer;
+            }
+            .replacement {
+                display: inline-block;
+                width: 200px;
+                height: 26px;
+                line-height: 25px;
+                border: 1px solid #ccc;
+                background: #fff;
+                padding-left: 15px;
+                position: absolute;
+                top: 5px;
+                left: 52px;
+                z-index: -1;
+            }
+        }
+    }
+}

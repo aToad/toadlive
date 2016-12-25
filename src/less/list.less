@@ -1,0 +1,61 @@
+@import "reset.less";
+@import "nav.less";
+@import "page.less";
+
+.main {
+    width: 100%;
+
+    .breadcrumb {
+        height: 50px;
+        line-height: 50px;
+        padding-left: 15px;
+        border-bottom: 1px dashed #ccc;
+        position: relative;
+
+        li {
+            float: left;
+
+            a {
+                padding: 0 15px;
+            }
+        }
+        .admin {
+            position: absolute;
+            top: 0;
+            right: 5%;
+            color: red;
+            font-size: 15px;
+            font-weight: normal;
+        }
+    }
+
+    .list {
+        width: 95%;
+        margin: 25px auto;
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+
+        tr {
+            height: 35px;
+            line-height: 35px;
+            background: #eee;
+            &:hover {
+                background: #333;
+                color: #eee;
+            }
+        }
+        th, td {
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        span {
+            cursor: pointer;
+        }
+        .article {
+            color: red;
+            width: 200px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}

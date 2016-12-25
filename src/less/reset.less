@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'outaikaistd';
+    src: url('../font/outaikaistd.woff') format('woff');
+}
+@font-color: #666;
+@link-hover-color: #999;
+
+.ts {
+    background: url('../img/bg.jpg');
+    font: 16px/1.5 outaikaistd, 'Georgia', 'Palatino', 'Palatino Linotype', 'Times', 'Times New Roman', 'serif';
+    color: @font-color;
+    display: flex;
+}
+
+body, h1, h2, h3, h4, h5, h6, ul, dl, dd, p, blockquote{
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: @font-color;
+    &:hover {
+        color: @link-hover-color;
+    }
+}

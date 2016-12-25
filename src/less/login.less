@@ -1,0 +1,81 @@
+@import "reset.less";
+
+.round-corner(@top, @right, @bottom, @left) {
+    border-top-left-radius: @top;
+    border-top-right-radius: @right;
+    border-bottom-right-radius: @bottom;
+    border-bottom-left-radius: @left;
+}
+
+[name=login] {
+    width: 340px;
+    height: 300px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #eee;
+
+    h2 {
+        .round-corner(5px, 5px, 0, 0);
+        height: 40px;
+        line-height: 40px;
+        color: #666;
+        font-size: 15px;
+        background: rgb(77, 153, 134);
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 1px;
+        margin-bottom: 35px;
+    }
+
+    p {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        padding: 0;
+        letter-spacing: 2px;
+        position: relative;
+
+        img {
+            position: absolute;
+            top: 1px;
+            right: 25px;
+        }
+    }
+
+    label {
+        text-align: center;
+        display: block;
+        width: 80px;
+        height: 35px;
+        line-height: 35px;
+        border: 1px solid #ccc;
+        background: #fff;
+        border-right: none;
+        .round-corner(5px, 0, 0, 5px);
+    }
+
+    input:not([type=submit]) {
+        width: 200px;
+        height: 35px;
+        line-height: 35px;
+        border: 1px solid #ccc;
+        padding: 0;
+        .round-corner(0, 5px, 5px, 0);
+        padding-left: 15px;
+    }
+    input[type=submit] {
+        background: #fff;
+        border-radius: 5px;
+        height: 35px;
+        width: 80px;
+        border: none;
+        color: #666;
+        box-shadow: 0 0 5px #ccc;
+        cursor: pointer;
+        letter-spacing: 2px;
+    }
+}
