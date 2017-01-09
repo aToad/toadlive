@@ -605,6 +605,14 @@ Toad.prototype.click = function(fn){
     return this;
 };
 
+Toad.prototype.each = function(fn) {
+    var that = this.elements;
+    for (var i = 0, len = that.length; i < len; i++) {
+        fn(that[i], i);
+    }
+    return this;
+}
+
 var TS = function(param) {
     return new Toad(param);
 };

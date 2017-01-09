@@ -6,7 +6,7 @@ TS(".expand").click(function() {
 });
 
 TS(".collapse").click(function() {
-    TS(this).parent().css("maxHeight", "500px");
+    TS(this).parent().parent().css("maxHeight", "500px");
 });
 
 TS(window).on("scroll", function() {

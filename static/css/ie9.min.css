@@ -1,0 +1,8 @@
+.entry {
+  /* ie8及以下实现圆角 */
+  background-color: transparent;
+}
+.entry a {
+  font-size: 20px;
+  color: #000;
+}

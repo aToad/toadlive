@@ -1,5 +1,5 @@
-@import "reset.less";
-@import "page.less";
+@import "reset.inc.less";
+@import "page.inc.less";
 
 .ts {
     flex-wrap: wrap;
@@ -134,19 +134,26 @@
                 }
                 ul {
                     li {
-                        color: red;
+                        color: #444;
                         list-style: disc inside;
                         padding: 5px 18px;
                     }
                 }
                 p {
                     line-height: 30px;
-                    text-align: justify;
+
+                    > code {
+                        background-color: rgba(241, 148, 184, .5);
+                    }
+                    > img {
+                        max-width: 100%;
+                    }
                 }
-                pre, code {
-                    font: 16px/2.5 'Georgia', 'Palatino', 'Palatino Linotype', 'Times', 'Times New Roman', 'serif';
-                    color: #fff;
+
+                > pre {
+                    font: 16px/1.8 sans-serif;
                 }
+
                 blockquote {
                     background-color: #eee;
                     p {
@@ -193,4 +200,10 @@
     width: 100%;
     background: #000;
     z-index: 999;
+    p {
+        text-align: center;
+        font-size: 14px;
+        height: 25px;
+        line-height: 25px;
+    }
 }

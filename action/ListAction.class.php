@@ -1,11 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm
- * User: Toad
- * Date: 2016/11/29
- * Time: 20:40.
- */
 class ListAction extends Action
 {
 
@@ -15,6 +9,10 @@ class ListAction extends Action
         $this->action();
     }
 
+    /**
+     * 路由控制
+     * @return void
+     */
     public function action()
     {
         switch ($_GET["action"]) {
@@ -41,6 +39,7 @@ class ListAction extends Action
                 $this->view->inject("list", "图片列表"); // 活动导航
                 $this->view->inject("admin", $_SESSION["username"]); // 管理员
 
+                # 分页
                 $page = new Page($this->model->getAllImages(), PAGE_SIZE);
                 $this->view->inject("images", $this->model->getPageImages($page->limit));
                 $this->view->inject("page", $page->outputHTML());

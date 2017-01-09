@@ -18,6 +18,11 @@ class Action
      */
     protected $model;
 
+    /**
+     * 添加视图和模型属性
+     * @param object $view  视图
+     * @param object $model 模型
+     */
     function __construct($view, $model)
     {
         $this->view = $view;

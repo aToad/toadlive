@@ -9,9 +9,6 @@
     <script src="../static/highlight/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" href="../static/css/blog.min.css">
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="static/css/ie9.min.css">
-    <![endif]-->
 </head>
 <body class="ts">
     <header class="header">
@@ -25,7 +22,7 @@
     </header>
     <nav class="nav">
         <ul class="nav-list">
-            <li><a href="../home.php">Home</a></li>
+            <li><a href="../index.php">Home</a></li>
             <li><a href="index.php">首页</a></li>
             <li class="active"><a href="title.php">列表</a></li>
             <li><a href="">关于</a></li>
@@ -55,9 +52,8 @@
         </div>
     </div>
     <footer class="footer">
-        版权所有
+        <p>©2017 Toad </p>
+        <p>UI借鉴：<a href="http://sleepycat.org/">闲逸笔记</a></p>
     </footer>
-    <script src="../src/js/Toad.js" charset="utf-8"></script>
-    <script src="../src/js/blog.js" charset="utf-8"></script>
 </body>
 </html>

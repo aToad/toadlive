@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, minimum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>欢迎您的到访！</title>
+    <title>上传文件 | Toad's Blog</title>
     <link rel="stylesheet" href="../static/css/upload.min.css">
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="static/css/ie9.min.css">
-    <![endif]-->
 </head>
 <body class="ts">
 <nav class="nav">

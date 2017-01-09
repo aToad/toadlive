@@ -20,17 +20,24 @@ class PostModel extends Model
         return $this->$key;
     }
 
-    // 删除一篇文章
+    /**
+     * 删除一篇文章
+     * @return bool 是否删除成功
+     */
     public function removeOneArticle()
     {
-        $query = "DELETE FROM ts.article WHERE id = " . $this->id;
+        $query = "DELETE FROM article WHERE id = " . $this->id;
         return parent::adu($query);
     }
 
+    /**
+     * 修改一篇文章
+     * @return bool 是否修改成功
+     */
     public function updateOneArticle()
     {
         $query = "UPDATE
-                     ts.article
+                     article
                  SET
                      title = '$this->title',
                      author = '$this->author',
@@ -44,9 +51,13 @@ class PostModel extends Model
         return parent::adu($query);
     }
 
+    /**
+     * 获得一篇文章的数据
+     * @return object 一篇文章
+     */
     public function getOneArticle()
     {
-        $query = "SELECT * FROM ts.article WHERE id = '$this->id' LIMIT 1";
+        $query = "SELECT * FROM article WHERE id = '$this->id' LIMIT 1";
         return parent::getOne($query);
     }
 
@@ -56,7 +67,7 @@ class PostModel extends Model
      */
     public function isType()
     {
-        $query = "SELECT id FROM ts.type WHERE id='$this->type' LIMIT 1";
+        $query = "SELECT id FROM type WHERE id='$this->type' LIMIT 1";
         return parent::isOne($query);
     }
 
@@ -66,14 +77,14 @@ class PostModel extends Model
      */
     public function updateOneType()
     {
-        $query = "UPDATE ts.type SET size = size + 1 WHERE id = '$this->type'";
+        $query = "UPDATE type SET size = size + 1 WHERE id = '$this->type'";
         return parent::adu($query);
     }
 
     // 发表一篇文章
     public function postOneArticle()
     {
-        $query = "INSERT INTO ts.article (
+        $query = "INSERT INTO article (
                       title,
                       author,
                       type,

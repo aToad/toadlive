@@ -1,0 +1,136 @@
+.ts {
+  background: url('../img/bg.jpg');
+  font: 16px/1.5 sans-serif;
+  color: #666;
+  display: flex;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+dl,
+dd,
+p,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+a:hover {
+  color: #999;
+}
+.nav {
+  width: 150px;
+  height: 500px;
+  border-right: 1px solid #ccc;
+}
+.nav h1 {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 1px dashed #ccc;
+}
+.nav dl {
+  text-align: center;
+}
+.nav dl dt {
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+.nav dl dd {
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  line-height: 25px;
+  transition: height .5s;
+}
+.nav dl dd a {
+  display: block;
+  font-size: 14px;
+  color: #eee;
+}
+.nav dl dd.hover {
+  height: 25px;
+}
+#page {
+  margin: 0 auto;
+  text-align: center;
+}
+#page a {
+  display: inline-block;
+  width: 50px;
+  height: auto;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+#page a.active {
+  background: #000;
+  color: #fff;
+}
+.main {
+  width: 100%;
+}
+.main .breadcrumb {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 15px;
+  border-bottom: 1px dashed #ccc;
+  position: relative;
+}
+.main .breadcrumb li {
+  float: left;
+}
+.main .breadcrumb li a {
+  padding: 0 15px;
+}
+.main .breadcrumb .admin {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  color: red;
+  font-size: 15px;
+  font-weight: normal;
+}
+.main .list {
+  width: 95%;
+  margin: 25px auto;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+.main .list tr {
+  height: 35px;
+  line-height: 35px;
+  background: #eee;
+}
+.main .list tr:hover {
+  background: #333;
+  color: #eee;
+}
+.main .list th,
+.main .list td {
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.main .list span {
+  cursor: pointer;
+}
+.main .list .article {
+  color: red;
+  width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -59,6 +59,11 @@ class Model {
         return $rows;
     }
 
+    /**
+     * 获得数据的总行数
+     * @param  string $query 查询字符串
+     * @return int
+     */
     public function getAllLength($query)
     {
         $db = DB::getDB();
@@ -85,6 +90,8 @@ class Model {
         $db->close();
         if ($result) {
             return $result;
+        } else {
+            Tool::alertBack("查询失败！");
         }
     }
 }

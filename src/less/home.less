@@ -1,34 +1,34 @@
 @font-face {
-    font-family: 'outaikaistd';
+    font-family: "Eclectic";
 
-    src: url('../font/outaikaistd.woff') format('woff');
+    src: url("../font/Eclectic.ttf") format("truetype");
 }
 
-body {
+@keyframes round {
+    0% {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    100% {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+body, p {
     margin: 0;
     padding: 0;
 }
 
-@keyframes tip {
-    0% {
-        width: 50px;
-        height: 50px;
-    }
-
-    100% {
-        width: 80px;
-        height: 80px;
-    }
-}
-
 .ts {
-    font: 16px/1.5 outaikaistd, 'Georgia', 'Palatino', 'Palatino Linotype', 'Times', 'Times New Roman', 'serif';
+    font: 18px/1.5 'Georgia', 'Palatino', 'Palatino Linotype', 'Times', 'Times New Roman', 'serif';
     overflow: hidden;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .bg {
@@ -55,49 +55,116 @@ body {
         }
         &.img-active {
             opacity: 1;
-            background-image: url('../img/homebg.jpg');
+            background-image: url('../img/bg.jpg');
         }
     }
 }
 
 .entry {
-    line-height: 50px;
-
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 999;
 
-    width: 50px;
-    height: 50px;
-
-    animation: tip 1.5s linear alternate infinite;
-
-    border-radius: 50%;
-    background: rgba(255, 0, 0, .5);
-
-    align-items: center;
-    justify-content: center;
-    a {
-        font-size: 16px;
-
-        display: block;
-
+    h1 {
+        width: 100%;
+        height: 100px;
         text-align: center;
-
-        color: #eee;
-        &:hover {
-            color: #fff;
+        a {
+            font: 50px/1.5 "Eclectic";
+            text-decoration: none;
+            color: #eee;
         }
     }
+    .info {
+        width: 500px;
+        height: 350px;
+        background: rgba(255, 255, 255, 0.5);
+        margin: 0 auto;
+        position: relative;
+        box-shadow: 0 0 5px #000;
+        .face {
+            position: absolute;
+            top: -40px;
+            left: 210px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid #333;
+            // box-shadow: 0 0 5px #000;
+
+            img {
+                margin: 5px 0 0 5px;
+                width: 70px;
+                height: 70px;
+            }
+        }
+        .lrc {
+            width: 100%;
+            border-top: 10px solid #ccc;
+        }
+        .intro {
+            color: #000;
+            padding: 50px 30px 0;
+
+            p {
+                border: 1px solid #ccc;
+                height: 35px;
+                line-height: 35px;
+                margin-bottom: 10px;
+                display: flex;
+                text-align: center;
+                border-radius: 8px;
+                .title {
+                    width: 30%;
+                    border-right: 1px solid #ccc;
+                }
+                .content {
+                    width: 70%;
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                        &:hover {
+                            color: #666;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 .fix {
     font-size: 15px;
     z-index: 999;
-    .image,
-    .music {
-        position: fixed;
-        bottom: 0;
 
+    .circle {
+        width: 80px;
+        height: 80px;
+        display: none;
+        line-height: 50px;
+        z-index: 999;
+        text-align: center;
+        border-radius: 50%;
+        animation: round 2s infinite alternate;
+        cursor: pointer;
+        background: rgba(255, 0, 0, 0.5);
+        .icon {
+            animation: round 2s infinite alternate;
+            font-size: 25px;
+            color: #fff;
+        }
+    }
+
+    .image,
+    .music,
+    .date,
+    .time {
+        position: fixed;
         display: block;
 
         width: 80px;
@@ -142,13 +209,44 @@ body {
     }
     .image {
         right: 0;
-
+        bottom: 0;
         border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
     }
     .music {
         left: 0;
-
+        bottom: 0;
         border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+    }
+    .date,
+    .time {
+        top: 0;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        .title {
+            display: flex;
+        }
+        #month,
+        #second {
+            width: 50%;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        #day,
+        #minute {
+            width: 50%;
+        }
+        .controls {
+            line-height: 35px;
+            font-weight: bold;
+        }
+    }
+    .date {
+        left: 0;
+    }
+    .time {
+        right: 0;
     }
     .toc {
         position: absolute;

@@ -27,7 +27,7 @@ class UploadModel extends Model{
 
     public function uploadOneSong()
     {
-        $query = "INSERT INTO ts.song (
+        $query = "INSERT INTO song (
                       title,
                       singer,
                       album,
@@ -43,7 +43,7 @@ class UploadModel extends Model{
 
     public function uploadOneImage()
     {
-        $query = "INSERT INTO ts.bg (
+        $query = "INSERT INTO bg (
                       title,
                       author,
                       link,

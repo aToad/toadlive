@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, minimum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>欢迎您的到访！</title>
+    <title>发表文章 | Toad's Blog</title>
     <link rel="stylesheet" href="../static/css/post.min.css">
 </head>
 <body class="ts">

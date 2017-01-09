@@ -12,7 +12,7 @@ if (isset($_GET["action"])) {
     $query = "SELECT
                  id
               FROM
-                  ts.admin
+                  admin
               WHERE
                   username = '{$_POST['username']}'
               AND

@@ -9,7 +9,7 @@ var gulp = require("gulp"), // 主文件
 
 gulp.task("less", function() {
     var combined = combiner.obj([
-        gulp.src("src/less/*.less"),
+        gulp.src(["src/less/*.less", "!src/less/*inc.less"]),
         less(),
         rename({
             dirname: "css",

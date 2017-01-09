@@ -1,9 +1,39 @@
 TS("body").css("height", Toad.getViewport().height + "px"); // 初始化为视窗高度
-
+TS(".entry").css("height", Toad.getViewport().height + "px");
 toggleImage(); // 图片预加载
 
+TS("#year").html(new Date().getFullYear());
+TS("#month").html(new Date().getMonth() + 1);
+TS("#day").html(new Date().getDate());
+TS("#hour").html(new Date().getHours());
+TS("#minute").html(new Date().getMinutes());
+TS("#second").html(new Date().getSeconds());
+
+function update() {
+    setTimeout(function() {
+        TS("#year").html(new Date().getFullYear());
+        TS("#month").html(new Date().getMonth() + 1);
+        TS("#day").html(new Date().getDate());
+        TS("#hour").html(new Date().getHours());
+        TS("#minute").html(new Date().getMinutes());
+        TS("#second").html(new Date().getSeconds());
+        update();
+    }, 1000);
+}
+
+update();
+
 TS("#next-image").click(function() {
+    if (TS(".circle").css("display") === "none") {
+        TS(".entry").css("display", "none");
+        TS(".circle").css("display", "block");
+    }
     toggleImage(); // 点击切换图片
+});
+
+TS(".circle").click(function() {
+    TS(".entry").css("display", "block");
+    TS(".circle").css("display", "none");
 });
 
 function toggleImage() {

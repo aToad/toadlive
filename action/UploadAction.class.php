@@ -14,6 +14,10 @@ class UploadAction extends Action
         $this->action();
     }
 
+    /**
+     * 路由控制
+     * @return void
+     */
     public function action()
     {
         switch ($_GET["action"]) {
