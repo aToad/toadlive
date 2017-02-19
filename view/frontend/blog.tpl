@@ -13,7 +13,7 @@
 <body class="ts">
     <header class="header">
         <figure>
-            <img src="../static/img/Toad.png" alt="">
+            <img src="../static/img/toad.png" alt="">
             <figcaption>
                 <h1>Toad's Blog</h1>
                 <p>Be a toad, to seek your swan.</p>
@@ -25,7 +25,7 @@
             <li><a href="../index.php">Home</a></li>
             <li class="active"><a href="index.php">首页</a></li>
             <li><a href="title.php">列表</a></li>
-            <li><a href="">关于</a></li>
+            <li><a href="me.php">关于</a></li>
         </ul>
     </nav>
     <div class="main">

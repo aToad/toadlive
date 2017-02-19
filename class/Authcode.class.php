@@ -65,7 +65,7 @@ class Authcode
                 mt_rand($i * ($this->width/4), ($i+1) * ($this->width/4) - 10),
                 mt_rand($this->height/2, $this->height/1.5),
                 imagecolorallocate($this->img, mt_rand(0, 120), mt_rand(0, 120), mt_rand(0, 120)),
-                "static/font/elephant.ttf",
+                "static/fonts/elephant.ttf",
                 $this->code[$i]
             );
         }

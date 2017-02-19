@@ -54,7 +54,9 @@
                     <th>歌名</th>
                     <th>歌手</th>
                     <th>专辑</th>
+                    <th>文件</th>
                     <th>歌词</th>
+                    <th>封面</th>
                     <th>操作</th>
                 </tr>
             </thead>
@@ -63,9 +65,11 @@
                 <tr>
                     <td>{@key+1}</td>
                     <td>{@value->title}</td>
-                    <td>{@value->singer}</td>
+                    <td>{@value->author}</td>
                     <td>{@value->album}</td>
+                    <td>{@value->src}</td>
                     <td>{@value->lrc}</td>
+                    <td>{@value->cover}</td>
                     <td><span>修改</span> | <span class="delete" data-name="music" title="{@value->id}">删除</span></td>
                 </tr>
             {/foreach}
@@ -80,6 +84,8 @@
                 <th>编号</th>
                 <th>图名</th>
                 <th>作者</th>
+                <th>文件名</th>
+                <th>链接</th>
             </tr>
             </thead>
             <tbody>
@@ -88,6 +94,8 @@
                     <td>{@value->id}</td>
                     <td>{@value->title}</td>
                     <td>{@value->author}</td>
+                    <td>{@value->src}</td>
+                    <td>{@value->link}</td>
                 </tr>
             {/foreach}
             </tbody>

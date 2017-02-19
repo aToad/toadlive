@@ -1,0 +1,352 @@
+body,
+h1,
+h3,
+p,
+figure,
+figcaption,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+.mplayer {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  overflow: hidden;
+}
+.header {
+  height: 50px;
+  width: 100%;
+  background-color: #c62f2f;
+}
+.header h1 {
+  color: #fff;
+  width: 200px;
+  line-height: 50px;
+  font-size: 22px;
+  text-align: center;
+}
+.container {
+  background-color: #fafafa;
+  display: flex;
+}
+.container .nav {
+  width: 200px;
+  height: 100%;
+  background-color: #f5f5f7;
+  border-right: 1px solid #e1e1e2;
+  box-sizing: border-box;
+}
+.container .nav .playing {
+  width: 200px;
+  height: 60px;
+  border-top: 1px solid #e1e1e2;
+  position: fixed;
+  bottom: 50px;
+  display: flex;
+}
+.container .nav .playing .action {
+  width: 15%;
+  height: 60px;
+}
+.container .nav .playing .action span {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.container .nav .playing figure {
+  width: 85%;
+  height: 60px;
+  display: flex;
+}
+.container .nav .playing figure .cover {
+  height: 60px;
+  width: 60px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+.container .nav .playing figure .cover img {
+  width: 59px;
+  height: 59px;
+  display: block;
+}
+.container .nav .playing figure .detail span {
+  padding-left: 10px;
+  display: block;
+}
+.container .nav .playing figure .detail .title {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  padding-top: 15px;
+}
+.container .nav .playing figure .detail .author {
+  font-size: 12px;
+  padding-top: 3px;
+}
+.container .main {
+  position: relative;
+}
+.container .main table,
+.container .main tr,
+.container .main td {
+  text-align: center;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-collapse: collapse;
+  line-height: 30px;
+}
+.container .main table {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container .main table tr:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+.container .main table .number {
+  width: 5%;
+}
+.container .main table th {
+  border: 1px solid #ccc;
+}
+.container .main table th:first-child {
+  border-left: none;
+}
+.container .main table th:last-child {
+  border-right: none;
+}
+.container .main #fullshow {
+  visibility: hidden;
+  display: flex;
+  max-width: 1210px;
+  height: 100%;
+  margin: 0 auto;
+}
+.container .main #fullshow .fullcover {
+  width: 40%;
+}
+.container .main #fullshow .fullcover .circle-cover {
+  max-width: 250px;
+  max-height: 250px;
+  border: 10px solid #000;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 15% auto 0;
+}
+.container .main #fullshow .fullcover .circle-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+.container .main #fullshow .fullcover .fullaction {
+  width: 100%;
+  height: 35px;
+  margin: 5% auto 0;
+}
+.container .main #fullshow .fullcover .fullaction ul {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  display: flex;
+  justify-content: space-around;
+}
+.container .main #fullshow .fullcover .fullaction ul li {
+  width: 20%;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container .main #fullshow .fullsong {
+  padding: 5% 0 0 10%;
+  width: 50%;
+}
+.container .main #fullshow .fullsong header {
+  padding: 0 10%;
+}
+.container .main #fullshow .fullsong header h3 {
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
+}
+.container .main #fullshow .fullsong header p {
+  height: 25px;
+  line-height: 25px;
+}
+.container .main #fullshow .fullsong header p span {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 35px;
+  line-height: 35px;
+}
+.container .main #fullshow .fullsong header p .album {
+  width: 40%;
+}
+.container .main #fullshow .fullsong .lrc {
+  height: 70%;
+  margin-top: 5%;
+  overflow-y: scroll;
+}
+.container .main #fullshow .fullsong .lrc #lrc-list {
+  text-align: center;
+  line-height: 35px;
+}
+.footer {
+  height: 50px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f6f6f8;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #e1e1e2;
+  display: flex;
+}
+.footer .controls {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer .controls #prev,
+.footer .controls #next,
+.footer .controls #play-toggle {
+  border-radius: 50%;
+  background-color: #e83c3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.footer .controls #prev .icon,
+.footer .controls #next .icon,
+.footer .controls #play-toggle .icon {
+  color: #fff;
+}
+.footer .controls #prev,
+.footer .controls #next {
+  width: 31px;
+  height: 31px;
+  margin-top: 9px;
+}
+.footer .controls #play-toggle {
+  width: 36px;
+  height: 36px;
+  margin-top: 6px;
+}
+.footer .progress {
+  display: flex;
+  padding-left: 5px;
+  width: auto;
+  line-height: 50px;
+}
+.footer .progress #play-progress {
+  width: 88%;
+  height: 4px;
+  margin: 22px 5px 0 5px;
+  border-radius: 2px;
+  background-color: #c6c6c6;
+  border: none;
+  cursor: pointer;
+}
+.footer .progress #play-progress::-moz-progress-bar {
+  background-color: #c6c6c6;
+  border-radius: 2px;
+}
+.footer .progress #play-progress::-moz-progress-bar {
+  background-color: #e83c3c;
+  border-radius: 2px;
+}
+.footer .progress #play-progress::-webkit-progress-value {
+  background-color: #e83c3c;
+}
+.footer .volume {
+  width: 150px;
+  display: flex;
+  position: absolute;
+  right: 170px;
+}
+.footer .volume #volume-toggle {
+  width: 20px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+.footer .volume #volume-bar {
+  width: 120px;
+  height: 4px;
+  margin-top: 22px;
+  border-radius: 4px;
+  background-color: #c6c6c6;
+  cursor: pointer;
+  border: none;
+}
+.footer .volume #volume-bar::-moz-progress-bar {
+  background-color: #c6c6c6;
+  border-radius: 2px;
+}
+.footer .volume #volume-bar::-moz-progress-bar {
+  background-color: #e83c3c;
+  border-radius: 2px;
+}
+.footer .volume #volume-bar::-webkit-progress-value {
+  background-color: #e83c3c;
+}
+.footer .btns {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer .btns #repeat,
+.footer .btns #lrc,
+.footer .btns #list {
+  cursor: pointer;
+}
+.footer .btns #repeat {
+  width: 30px;
+}
+.footer .btns #lrc {
+  width: 40px;
+}
+.footer .btns #lrc span {
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+.footer .btns #list {
+  width: 95px;
+}
+.footer .btns #list span {
+  font-size: 20px;
+  position: relative;
+}
+.footer .btns #list span::after {
+  position: absolute;
+  left: 20px;
+  top: 1px;
+  content: "1";
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #666;
+  display: block;
+  width: 35px;
+  height: 16px;
+  background: #ccc;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}

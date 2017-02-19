@@ -25,7 +25,7 @@
             <li><a href="../index.php">Home</a></li>
             <li><a href="index.php">首页</a></li>
             <li class="active"><a href="title.php">列表</a></li>
-            <li><a href="">关于</a></li>
+            <li><a href="me.php">关于</a></li>
         </ul>
     </nav>
     <div class="main">

@@ -94,4 +94,13 @@ class Model {
             Tool::alertBack("查询失败！");
         }
     }
+
+    public function getMaxId($table) 
+    {
+        $db = DB::getDB();
+        $result = $db->query("SELECT max(id) From " . $table);
+        $db->close();
+        return $result;
+    }
+
 }

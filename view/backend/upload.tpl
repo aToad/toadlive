@@ -67,10 +67,6 @@
                     <input type="text" name="album" id="album">
                 </p>
                 <p>
-                    <label for="cover">封面：</label>
-                    <input type="text" name="cover" id="cover">
-                </p>
-                <p>
                     <input type="submit" value="上传" name="send">
                 </p>
             </form>

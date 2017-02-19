@@ -1,0 +1,136 @@
+body, h1, h2, h3, ul, p, figure {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.ts {
+    background-color: #fafafa;
+    font-size: 14px;
+    color: #666;
+}
+
+.header {
+    width: 100%;
+    height: auto;
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-image: url(../img/me.header.png);
+        background-size: cover;
+        position: relative;
+        img {
+            height: 80px;
+            border-radius: 80px;
+            border: 2px solid #fff;
+        }
+    }
+}
+
+.me {
+    .info {
+        div {
+            margin: 5px 0;
+            line-height: 25px;
+            height: 25px;
+        }
+        .name {
+            width: 100%;
+            text-align: center;
+            color: #333;
+            font-size: 16px;
+        }
+        .major, .basic, .contact {
+            text-align: center;
+        }
+    }
+    .develop {
+        max-width: 640px;
+        margin: 0 auto;
+        
+        #preface, #code, #project, #blog {
+            width: 85%;
+            border-radius: 8px;
+            margin: 15px auto;
+            background-color: steelblue;
+            border: 1px solid steelblue;
+            overflow: hidden;
+        }
+
+        p {
+            color: #fafafa;
+        }
+        
+        header {
+            background-color: #fafafa;
+            h2 {
+                width: 150px;
+                height: 30px;
+                line-height: 30px;
+                margin: 0 auto;
+                text-align: center;
+                background-color: steelblue;
+                color: #fff;
+                position: relative;
+                font-size: 16px;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border-top: 15px solid transparent;
+                    border-bottom: 15px solid transparent;
+                    border-right: 15px solid #fafafa;
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-top: 15px solid transparent;
+                    border-bottom: 15px solid transparent;
+                    border-left: 15px solid #fafafa;
+                }
+            }
+        }
+        article {
+            width: 100%;
+            line-height: 30px;
+            color: #fff;          
+            &:first-child {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+            &:last-child {
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+            h3 {
+                padding-left: 10px;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            .hidden {
+                width: 100%;
+                padding-right: 10px;
+                background-color: #fafafa;
+                color: green;
+                text-indent: 10px;
+                height: 0;
+                overflow: hidden;
+                transition: height 1s;
+            }
+        }
+    }
+    
+}

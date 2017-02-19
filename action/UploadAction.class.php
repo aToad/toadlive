@@ -25,14 +25,17 @@ class UploadAction extends Action
                 $this->view->inject("music", true);
                 $this->view->inject("upload", "上传歌曲");
                 $this->view->inject("admin", $_SESSION["username"]); // 管理员
-
+                
                 if (isset($_POST["send"])) {
                     $upload = new Upload($_FILES["select"], $_POST["MAX_FILE_SIZE"]);
+                    $songId = $upload->getSongId();
                     if ($upload->movedToUpload()) {
                         $this->model->title = $_POST["title"];
                         $this->model->singer = $_POST["singer"];
                         $this->model->album = $_POST["album"];
-                        $this->model->src = "upload/music/" . $_FILES["select"]["name"];
+                        $this->model->src = "upload/mp3/" . $upload->file;
+                        $this->model->lrc = "upload/lrc/" . $songId . ".json";
+                        $this->model->cover = "upload/cover/" . $songId . ".jpg";
                         if ($this->model->uploadOneSong()) {
                             Tool::alertLocation("上传成功！", "list.php?action=music");
                         }

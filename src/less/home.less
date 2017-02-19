@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Eclectic";
 
-    src: url("../font/Eclectic.ttf") format("truetype");
+    src: url("../fonts/Eclectic.ttf") format("truetype");
 }
 
 @keyframes round {
@@ -55,7 +55,8 @@ body, p {
         }
         &.img-active {
             opacity: 1;
-            background-image: url('../img/bg.jpg');
+            background: url('../img/bg.png');
+            background-size: cover;
         }
     }
 }
@@ -75,12 +76,12 @@ body, p {
         a {
             font: 50px/1.5 "Eclectic";
             text-decoration: none;
-            color: #eee;
+            color: #666;
         }
     }
     .info {
         width: 500px;
-        height: 350px;
+        height: 200px;
         background: rgba(255, 255, 255, 0.5);
         margin: 0 auto;
         position: relative;
@@ -94,17 +95,12 @@ body, p {
             border-radius: 50%;
             background: #fff;
             border: 1px solid #333;
-            // box-shadow: 0 0 5px #000;
 
             img {
                 margin: 5px 0 0 5px;
                 width: 70px;
                 height: 70px;
             }
-        }
-        .lrc {
-            width: 100%;
-            border-top: 10px solid #ccc;
         }
         .intro {
             color: #000;
@@ -135,7 +131,30 @@ body, p {
             }
         }
     }
-
+    .music {
+        background: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 5px #000;
+        margin-top: 8px;
+        width: 500px;
+        height: 150px;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-wrap: wrap;
+        .control {
+            width: 32.5%;
+            height: 140px;
+            box-sizing: border-box;
+            border-right: 1px solid #ccc;
+        }
+        .lrc {
+            height: 140px;
+            width: 67.5%;
+        }
+        .progress {
+            width: 500px;
+            height: 10px;
+        }
+    }
 }
 
 .fix {
@@ -190,7 +209,7 @@ body, p {
             height: 39px;
 
             border-top: 1px solid #ccc;
-            .icon {
+            .fa {
                 line-height: 39px;
 
                 display: block;
@@ -199,10 +218,10 @@ body, p {
                 width: 50%;
                 height: 39px;
             }
-            .icon-fullscreen {
+            .fa-fullscreen {
                 display: block;
             }
-            .icon-resize-small {
+            .fa-resize-small {
                 display: none;
             }
         }

@@ -14,6 +14,8 @@ class UploadModel extends Model{
     private $ext;
     private $author;
     private $link;
+    private $lrc;
+    private $cover;
 
     public function __set($key, $value)
     {
@@ -29,15 +31,20 @@ class UploadModel extends Model{
     {
         $query = "INSERT INTO song (
                       title,
-                      singer,
+                      author,
                       album,
-                      src
+                      src,
+                      lrc,
+                      cover
                  ) VALUES (
                       '$this->title',
                       '$this->singer',
                       '$this->album',
-                      '$this->src'
+                      '$this->src',
+                      '$this->lrc',
+                      '$this->cover'
                  )";
+        echo $query;
         return parent::adu($query);
     }
 

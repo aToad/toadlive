@@ -16,6 +16,7 @@ class Upload {
     private $upload;
     public $ext;
     public $name;
+    public $file;
 
     function __construct($files, $maxFileSize)
     {
@@ -26,6 +27,7 @@ class Upload {
         $this->error = $files["error"];
         $this->limitSize = $maxFileSize;
         $this->ext = $this->getExt();
+        $this->file = $this->getSongId() . "." . $this->ext;
         $this->checkType();
         $this->checkError();
     }
@@ -40,7 +42,7 @@ class Upload {
     private function checkType()
     {
         if (preg_match('/audio/', $this->type)) {
-            $this->upload = ROOT . "/upload/music/" . $this->name;
+            $this->upload = ROOT . "/upload/mp3/" . $this->file;
             $array = array("audio/mpeg", "audio/mp3", "audio/x-wav");
             if (! in_array($this->type, $array)) {
                 Tool::alertBack("请上传合法的音频文件！");
@@ -53,6 +55,13 @@ class Upload {
                 Tool::alertBack("请输入合法的图像文件！");
             }
         }
+    }
+
+    public function getSongId() {
+        $model = new Model();
+        $result = $model->getMaxId("song");
+        $row = $result->fetch_array();
+        return ($row[0] + 1);
     }
 
     private function checkError() {

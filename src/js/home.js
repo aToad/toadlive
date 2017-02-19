@@ -24,16 +24,7 @@ function update() {
 update();
 
 TS("#next-image").click(function() {
-    if (TS(".circle").css("display") === "none") {
-        TS(".entry").css("display", "none");
-        TS(".circle").css("display", "block");
-    }
     toggleImage(); // 点击切换图片
-});
-
-TS(".circle").click(function() {
-    TS(".entry").css("display", "block");
-    TS(".circle").css("display", "none");
 });
 
 function toggleImage() {
@@ -89,15 +80,14 @@ TS("#music-toggle").click(function() {
 
     if (music.paused) {
 
-        TS(this).removeClass("icon-play"); // 图标切换
-        TS(this).addClass("icon-pause"); // 图标切换
+        TS(this).removeClass("fa-play"); // 图标切换
+        TS(this).addClass("fa-pause"); // 图标切换
         TS(this).attr("title", "暂停"); // 切换提示
         music.play(); // 播放
-
     } else {
 
-        TS(this).removeClass("icon-pause"); // 切换图标
-        TS(this).addClass("icon-play"); // 切换图标
+        TS(this).removeClass("fa-pause"); // 切换图标
+        TS(this).addClass("fa-play"); // 切换图标
         TS(this).attr("title", "播放"); // 切换提示
         music.pause(); //  暂停
     }
@@ -116,8 +106,8 @@ TS("#music-next").click(function() {
         fn: function(xhr) {
             music.src = xhr.responseText;
             music.play();
-            TS("#music-toggle").removeClass("icon-play"); // 图标切换
-            TS("#music-toggle").addClass("icon-pause"); // 图标切换
+            TS("#music-toggle").removeClass("fa-play"); // 图标切换
+            TS("#music-toggle").addClass("fa-pause"); // 图标切换
             TS("#music-toggle").attr("title", "暂停"); // 切换提示
         }
     });
