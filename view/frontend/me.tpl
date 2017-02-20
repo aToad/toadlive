@@ -85,7 +85,12 @@
                 <ul class="move">             
                     <li class="item">
                         <img src="../static/img/svg/file_type_html.svg" alt="">
-                        <div class="text"></div>
+                        <div class="text">
+                            <ul class="hidden">
+                                <li><span class="fa fa-thumbs-up"></span> 语义化标签</li>
+                                <li><span class="fa fa-thumbs-up"></span> 音频与视频</li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="item">
                         <img src="../static/img/svg/file_type_css.svg" alt="">
@@ -140,11 +145,40 @@
                             </ul>
                         </div>
                     </li>
-                </ul>
+                </ul>       
             </div>
         </article>
         <article class="project">     
-            project   
+            <header>
+                <h2>项目经验</h2>
+            </header>
+            <div class="project-item">
+                <h3><span class="fa fa-eye"></span> 个人独立博客</h3>
+                <ul class="hidden">
+                    <li><span class="fa fa-thumbs-up"></span> URL <a href="http://www.toadlive.cn">http://www.toadlive.cn</a></li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 首页全屏功能</li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 首页ajax加载图片和音乐</li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 博文分类功能</li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 使用markdown语法</li>
+                    <li><span class="fa fa-thumbs-up"></span> 后台 登录表单</li>
+                    <li><span class="fa fa-thumbs-up"></span> 后台 文件上传</li>
+                    <li><span class="fa fa-thumbs-up"></span> 后台 内容管理</li>
+                    <li><span class="fa fa-thumbs-up"></span> 后台 简易markdown编辑器</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3><span class="fa fa-eye"></span> 网易云音乐轮子</h3>
+                <ul class="hidden">
+                    <li><span class="fa fa-thumbs-up"></span> URL <a href="http://www.toadlive.cn/mplayer">http://www.toadlive.cn/mplayer</a></li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 歌曲列表</li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 播放与暂停功能</li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 ajax加载歌词</li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 歌词滚动</li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 加载歌曲信息</li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 音量调节</li>
+                    <li><span class="fa fa-thumbs-up"></span> 前端 快进功能</li>
+                </ul>
+            </div>   
         </article>
     </section>
     <nav class="nav">
